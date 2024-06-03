@@ -80,7 +80,7 @@ const Sidebar: FC<SidebarProp> = ({ open }) => {
               }}
               className="mb-5"
             >
-              <div className="font-bold text-4xl py-3">AngPur</div>
+              <div className="font-bold text-4xl py-3">Prakasa</div>
               <div className="w-full text-center">F&B</div>
             </DrawerHeader>
             <div>
@@ -464,7 +464,7 @@ const Sidebar: FC<SidebarProp> = ({ open }) => {
             }}
             className="mb-5"
           >
-            <div className="font-bold text-4xl py-3">AngPur</div>
+            <div className="font-bold text-4xl py-3">Prakasa</div>
             <div className="w-full text-center">F&B</div>
           </DrawerHeader>
           <div>

@@ -80,7 +80,7 @@ const Navbar: React.FC<Props> = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        AngPur F&B
+        Prakasa F&B
       </Typography>
       <Divider />
       <List>
@@ -149,7 +149,7 @@ const Navbar: React.FC<Props> = (props) => {
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                 >
-                  AngPur F&B
+                  Prakasa F&B
                 </Typography>
               </div>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>

@@ -108,7 +108,7 @@ const LoginAdminPage = () => {
         }}
       >
         <div className="text-center text-4xl flex gap-4 item mb-5">
-          <span className="font-bold">AngPur F&B</span>
+          <span className="font-bold">Prakasa F&B</span>
           <span>
             <FaPlane />
           </span>
