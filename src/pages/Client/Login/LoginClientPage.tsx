@@ -34,6 +34,7 @@ const LoginClientPage = () => {
     const result = loginGo.data;
 
     await Cookies.set("token", result.data.access_token);
+    await Cookies.set("refresh_token", result.data.refresh_token);
 
     if (result.data.access_token) {
       let decoded = jwt_decode(result.data.access_token) as any;

@@ -5,14 +5,19 @@ import { handleLogOut } from "./AuthApi";
 
 export const UseRefreshTokenQueryV2 = async () => {
   try {
+    const form = new FormData();
+
+    form.append("refresh_token", Cookies.get("refresh_token") as string);
+
     const newToken = await axios.post(
       `${import.meta.env.VITE_BASE_URL}${
         import.meta.env.VITE_LOGIN_SERVICE_REFRESH_END_POINT
       }`,
-      {},
+      form,
       {
         headers: {
           Authorization: `Bearer ${getJwtCookie()}`,
+          // "Content-Type": "multipart/form-data",
         },
       }
     );
@@ -21,6 +26,7 @@ export const UseRefreshTokenQueryV2 = async () => {
 
     if (newToken.status > 199 && newToken.status < 300) {
       Cookies.set("token", res.data.access_token);
+      Cookies.set("refresh_token", res.data.refresh_token);
       return true;
     }
 

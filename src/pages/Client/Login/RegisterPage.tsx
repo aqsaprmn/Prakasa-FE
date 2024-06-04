@@ -226,7 +226,7 @@ const RegisterPage = () => {
             id="form-submit-btn"
             className="h-11"
           >
-            Sign In
+            Register
           </MainCustomButton>
         </div>
         <div className=" text-sm text-center text-gray-500">
