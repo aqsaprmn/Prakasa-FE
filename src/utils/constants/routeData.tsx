@@ -12,10 +12,8 @@ export const defaultRoleV2 = {
       route: "/admin/order",
       expanded: false,
       translationKey: "Order",
-      isHidden: !permissionFullExtractor({
-        env: import.meta.env.VITE_ALLOWED_USER_MANAGEMENT,
-        role: "",
-      }),
+      childre: [],
+      isHidden: true,
     },
     {
       id: 2,
@@ -24,10 +22,8 @@ export const defaultRoleV2 = {
       route: "/admin/product",
       expanded: false,
       translationKey: "Product",
-      isHidden: !permissionFullExtractor({
-        env: import.meta.env.VITE_ALLOWED_PRODUCT_MANAGEMENT,
-        role: "",
-      }),
+      childre: [],
+      isHidden: true,
     },
     {
       id: 3,
@@ -36,10 +32,8 @@ export const defaultRoleV2 = {
       route: "/admin/user",
       expanded: false,
       translationKey: "User",
-      isHidden: !permissionFullExtractor({
-        env: import.meta.env.VITE_ALLOWED_USER_MANAGEMENT,
-        role: "",
-      }),
+      childre: [],
+      isHidden: true,
     },
   ],
 };

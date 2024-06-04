@@ -40,11 +40,34 @@ export default function MiniDrawer() {
   >(defaultRoleV2.routes);
 
   useMemo((): any => {
+    console.log(role);
+
     const newMenus = [...defaultRoleV2.routes].map((item) => {
       item.isHidden = !permissionFullExtractor({
         env: import.meta.env.VITE_ALLOWED_USER_MANAGEMENT,
         role: role,
       });
+
+      if (item.title === "User") {
+        item.isHidden = !permissionFullExtractor({
+          env: import.meta.env.VITE_ALLOWED_USER_MANAGEMENT,
+          role: role,
+        });
+      }
+
+      if (item.title === "Product") {
+        item.isHidden = !permissionFullExtractor({
+          env: import.meta.env.VITE_ALLOWED_PRODUCT_MANAGEMENT,
+          role: role,
+        });
+      }
+
+      if (item.title === "Order") {
+        item.isHidden = !permissionFullExtractor({
+          env: import.meta.env.VITE_ALLOWED_ORDER_MANAGEMENT,
+          role: role,
+        });
+      }
 
       return item;
     });

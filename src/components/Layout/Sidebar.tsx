@@ -1,4 +1,3 @@
-import lrtLogo from "@/assets/img/lrtLogo.png";
 import { handleLogOut } from "@app/Services/AuthApi";
 import { removeHidden } from "@app/utils/Processor";
 import { defaultRoleV2 } from "@app/utils/constants/routeData";

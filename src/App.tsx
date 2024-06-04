@@ -21,6 +21,7 @@ import OrderAdminPage from "./pages/Admin/Order/Order";
 import OrderDetailAdminPage from "./pages/Client/Order/OrderDetail";
 import ProductAdminPage from "./pages/Admin/Product/Product";
 import FeatureRoute from "./routes/FeatureRoute";
+import SuperGuard from "./routes/SuperGuard";
 
 function App() {
   useEffect(() => {
@@ -95,7 +96,7 @@ function App() {
               </Route>
 
               {/* User */}
-              <Route path="/admin/user" element={<PrivateRoute />}>
+              <Route path="/admin/user" element={<SuperGuard />}>
                 {/* GENERAL PAGE*/}
                 <Route path="/admin/user" element={<UserPage />} />
                 <Route path="/admin/user/create" element={<MainPage />} />
